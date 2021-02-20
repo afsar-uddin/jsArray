@@ -4,9 +4,212 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Js Array</title>
+    <title>Javascript Array</title>
+    <style>
+.menu {position: fixed;left: 0;top: 0;height: auto;width: 100%;background-color: rgba(0,0,0,0.5);z-index: 9;}
+.menu ul li { display: inline-block;}
+.menu ul li a {padding: 5px;text-decoration: none;color: #313131;background-color: magenta;border-radius: 2px;margin:3px; display: block;}
+div#concat {margin-top: 100px;}
+    </style>
 </head>
 <body>
-    
+    <div class="menu">
+        <ul>
+            <li><a href="#concat">Concat</a></li>
+            <li><a href="#copywithn">copyWithin</a></li>
+            <li><a href="#arrayEntries">Array Entries</a></li>
+            <li><a href="#fillArray">Fill()</a></li>
+            <li><a href="#filter">Filter()</a></li>
+            <li><a href="#find">Find()</a></li>
+            <li><a href="#findIndex">findIndex()</a></li>
+            <li><a href="#forEach">forEach()</a></li>
+        </ul>
+    </div>
+    <div id="concat">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>Concate: </h2>
+                let arr = [1,2,3,4,5]
+                let arr2 = [6,7,8,9,10]
+
+                let concatTwoArrays = arr.concat(arr2)
+                document.write(concatTwoArrays)
+            </pre>
+            <h3>Output: </h3>
+            <script>
+                let arr = [1,2,3,4,5]
+                let arr2 = [6,7,8,9,10]
+
+                let concatTwoArrays = arr.concat(arr2)
+                document.write(concatTwoArrays)
+            </script>
+        </div>
+    </div>
+
+    <div id="copywithn">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>Copywithin: <br>Copy specific three elements of Array </h2>
+                let OriginalArray = [1,2,3,4,5,6,7,8,9]
+                
+                document.write(OriginalArray.copyWithin(3,0))
+
+            </pre>
+            <h3>Output: </h3>
+            <script>
+                let OriginalArray = [1,2,3,4,5,6,7,8,9]
+                
+                document.write(OriginalArray.copyWithin(3,0))
+            </script>
+        </div>
+    </div>
+
+    <div id="arrayEntries">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>Array entries() <br> Create an Array Iterator object, and create a loop that iterates each key/value pair:
+                </h2>
+                let Districts = ['Dhaka', 'Chattagram', 'Sylhet', 'Barishal', 'Khulna', 'Rajshahi', 'Mymansing']
+                let serializeDistricts = Districts.entries()
+
+                for(x of serializeDistricts) {
+                    document.write(x + "<br>")
+                }
+            </pre>
+            <h3>Output: </h3>
+            <script>
+                let Districts = ['Dhaka', 'Chattagram', 'Sylhet', 'Barishal', 'Khulna', 'Rajshahi', 'Mymansing']
+                let serializeDistricts = Districts.entries()
+
+                for(x of serializeDistricts) {
+                    document.write(x + "<br>")
+                }
+            </script>
+            
+        </div>
+    </div>
+
+    <div id="fillArray">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>fill() </h2>
+                let fillWithOther = ['Rahim', 'Karim', 'Bakkar']
+                
+                document.write(fillWithOther.fill('Afsarina'))
+            </pre>
+            <h3>Output: </h3>
+            <script>
+                let fillWithOther = ['Rahim', 'Karim', 'Bakkar']
+                
+                document.write(fillWithOther.fill('Afsarina'))
+            </script>
+        </div>
+    </div>
+
+    <div id="filter">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>filter() </h2>
+                let listOfAges = [3,5,4,6,7,10,18,20,30,40,50,60]
+
+                function filterAge(age) {
+                    return age >= 18
+                }
+                document.write("Filtered values : " + listOfAges.filter(filterAge))
+            </pre>
+            <h3>Output: </h3>
+            <script>
+                let listOfAges = [3,5,4,6,7,10,18,20,30,40,50,60]
+
+                function filterAge(age) {
+                    return age >= 18
+                }
+                document.write("Filtered values : " + listOfAges.filter(filterAge))
+                
+            </script>
+        </div>
+    </div>
+
+    <div id="find">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>find() </h2>
+                let findingNumber = [3,5,4,6,7,10,18,20,30,40,50,60]
+
+                function findNumber(fn) {
+                    return fn >= 50
+                }
+                document.write("50 is the epected value : " + findingNumber.find(findNumber))
+                
+            </pre>
+            <h3>Output: </h3>
+            <script>
+                let findingNumber = [3,5,4,6,7,10,18,20,30,40,50,60]
+
+                function findNumber(fn) {
+                    return fn >= 50
+                }
+                document.write("50 is the epected value : " + findingNumber.find(findNumber))
+                
+            </script>
+        </div>
+    </div>
+
+    <div id="findIndex">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>findIndex() </h2>
+                let findIndex = [3,5,4,6,7,10,18,20,30,40,50,60]
+
+                function findex(fin) {
+                    return fin >= 30
+                }
+                document.write("The index of 30 is : " + findingNumber.findIndex(findex))
+                
+            </pre>
+            <h3>Output: </h3>
+            <script>
+                let findIndex = [3,5,4,6,7,10,18,20,30,40,50,60]
+
+                function findex(fin) {
+                    return fin >= 30
+                }
+                document.write("The index of 30 is : " + findingNumber.findIndex(findex))
+                
+            </script>
+        </div>
+    </div>
+
+    <div id="forEach">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>forEach() </h2>
+            </pre>
+            <h3>Output: </h3>
+            <script>
+                let diviSion = ['Dhaka','Chattogram','Barisal','Sylhet','Khulna','Rajshhi','Mymansingh']
+                let divResult
+
+                diviSion.forEach(arrangeWithIndex)
+                
+                function arrangeWithIndex(division, index) {
+                    document.write(index + ' => ' + division + '<br><br>')
+                }
+            </script>
+            
+        </div>
+    </div>
+
+
+
+    <!-- <div id="LinkWithMenuAnchor">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>Title </h2>
+            </pre>
+            <h3>Output: </h3>
+            
+        </div>
+    </div> -->
 </body>
 </html>
