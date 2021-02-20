@@ -23,6 +23,8 @@ div#concat {margin-top: 100px;}
             <li><a href="#find">Find()</a></li>
             <li><a href="#findIndex">findIndex()</a></li>
             <li><a href="#forEach">forEach()</a></li>
+            <li><a href="#keys">keys()</a></li>
+            <li><a href="#lastIndexOf">lastIndexOf()</a></li>
         </ul>
     </div>
     <div id="concat">
@@ -200,7 +202,64 @@ div#concat {margin-top: 100px;}
         </div>
     </div>
 
+    <div id="keys">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>keys() </h2>
+                let aRr = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+                let findKeys = aRr.keys()
 
+                for(x of findKeys) {
+                    document.write(x + '<br>')}
+            </pre>
+            <h3>Output: Keys of Arrays values </h3>
+            <script>
+                let aRr = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+                let findKeys = aRr.keys()
+
+                for(x of findKeys) {
+                    document.write(x + '<br>')
+                }
+            </script>
+        </div>
+    </div>
+
+    <div id="lastIndexOf">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>lastIndexOf() </h2>
+
+                let lastIndexOfArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+                let lioa = lastIndexOfArray.lastIndexOf('D')
+                document.write(" The index of selected element (D) of above array " + lioa)
+            </pre>
+            <h3>Output: </h3>
+            <script>
+                let lastIndexOfArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
+                let lioa = lastIndexOfArray.lastIndexOf('D')
+                document.write(" The index of selected element 'D' of above array is " + lioa)
+            </script>
+        </div>
+    </div>
+
+    <div id="pop">
+        <div style="margin-bottom: 30px">
+            <pre style="background-color: #313131; color: #f9f9f9; padding: 30px;">
+                <h2>pop() </h2>
+                let popArray = ['A', 'B', 'C', 'D']
+                document.write( "Remove the last element " + popArray.pop() + ' from above array<br>')
+                document.write( "After removing the last element " + popArray)
+            </pre>
+            <h3>Output: </h3>
+
+            <script>
+                let popArray = ['A', 'B', 'C', 'D']
+                document.write( "Remove the last element " + popArray.pop() + ' from above array <br><br>')
+                document.write( "After removing the last element " + popArray)
+            </script>
+            
+        </div>
+    </div>
 
     <!-- <div id="LinkWithMenuAnchor">
         <div style="margin-bottom: 30px">
